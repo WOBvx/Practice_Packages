@@ -1,0 +1,57 @@
+<!-- Javascript DOM 编程艺术2，p151 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Example</title>
+	<script>
+	function addLoadEvent(func){
+		var oldonload = window.onload;
+		if (typeof window.onload != 'function'){
+			window.onload = func;
+		}else {
+			window.onload = function(){
+				oldonload();
+				func();
+			}
+		}
+	}
+	</script>
+	<script>
+		function styleHeaderSibling(){
+			if(!document.getElementByTagName) return false;
+			var headers = document.getElementByTagName("h1");
+			var elem;
+			for (var i=0; i<headers.length; i++){
+				elem = getNextElement(headers[i].nextSibling);
+				elem.style.fontWeight = "bold";
+				elem.style.fontSize = "1.2em";
+			}
+		}
+		function getNextElement(node){
+			if(node.nodeType == 1){
+				return node;
+			}
+			if(node.nextSibling){
+				return getNextElement(node.nextSibling);
+			}
+			return null;
+		}
+		addLoadEvent(styleHeaderSiblings);
+	</script>
+
+</head>
+<body>
+	<h1>Hold the front page</h1>
+	<p>This first paragraph</p>
+	<p>Now you have the 2 sentence</p>
+	<p>the most important infomation</p>
+	<h1>Extra! Extra!</h1>
+	<p>Future development</p>
+	<p>You can read all about it here<p>
+	<p id="example" style = "color:grey; font-family:'Arial',sens-serif;">
+		An example
+	</p>
+</body>
+</html>

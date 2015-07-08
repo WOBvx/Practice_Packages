@@ -1,0 +1,21 @@
+<!-- Javascript DOM 编程艺术2，p151 -->
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset = "utf-8">
+	<title>Example</title>
+	<script>
+		window.onload = function(){
+			var para = document.getElementById("example");
+			alert(typeof para.nodeName); //目标得出 nodename 类型是 string
+			alert(typeof para.style);  //style 是 object
+		}
+	</script>
+</head>
+<body>
+	<p id="example" style = "color:grey; font-family:'Arial',sens-serif;">
+		An example
+	</p>
+</body>
+</html>
