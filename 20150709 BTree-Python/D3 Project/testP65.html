@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<title>D3 Page Template</title>
+		<script type="text/javascript" src="d3/d3.js"></script>
+	</head>
+	<body>
+		<script type="text/javascript">
+			d3.select("body").append("p").text("New paragraph");// 连缀语法，将三行代码放到一行。
+			var body = d3.select("body"); // 分开三行的写法
+			var p = body.append("p");
+			p.text ("New paragraph2")
+		</script>
+	</body>
+</html>
