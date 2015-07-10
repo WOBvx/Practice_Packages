@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Attr</title>
+    <script type="text/javascript" src="../d3/d3.js"></script>
+	<style>
+		div.bar {
+			display: inline-block;
+			width: 20px;
+			height: 75px;
+			background-color: teal;
+			margin-right: 2px;
+		}
+	</style>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var dataset = [];
+	for (var i = 0; i < 25; i++){
+		var newnumber = Math.random()*25; // <-- 新生成数都介于 0-25
+		dataset.push(newnumber); // <-- 变量A.push(变量B)，在变量A数组中add了变量B
+	}
+	d3.select("body").selectAll("div")
+		.data(dataset) // <-- 每个数值都会执行一次后续所有操作，相当于循环一次
+		.enter()
+		.append("div")
+		.attr("class","bar")
+		.style("height",function(d){
+			var barheight = d*5;
+			return barheight + "px";
+		});
+</script>
+
+</body>
+
+</html>

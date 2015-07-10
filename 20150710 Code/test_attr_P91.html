@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Attr</title>
+    <script type="text/javascript" src="../d3/d3.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var dataset = [11,22,13,34,25,16,7,8,9,10,1,2,34,5,16,27,8,19,0];
+	
+	var w = 500; //<-- 把长宽放在变量中
+	var h = 50;
+	var svg = d3.select("body")
+				.append("svg")
+				.attr("width",w)
+				.attr("height",h);
+				
+	svg.selectAll("rect")
+			.data(dataset)
+			.enter()
+			.append("rect")
+			.attr("x",function(d,i){
+				return i*21;
+			})
+			.attr("y",function(d){
+				return h-d;
+			})
+			.attr("width",20)
+			.attr("height",100);
+			
+</script>
+
+</body>
+
+</html>
