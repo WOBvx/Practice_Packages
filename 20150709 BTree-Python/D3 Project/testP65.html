@@ -7,10 +7,15 @@
 	</head>
 	<body>
 		<script type="text/javascript">
+			
+			<!-- 连缀方法 -->
 			d3.select("body").append("p").text("New paragraph");// 连缀语法，将三行代码放到一行。
-			var body = d3.select("body"); // 分开三行的写法
+			
+			<!-- 多行写法 -->
+			var body = d3.select("body"); 
 			var p = body.append("p");
 			p.text ("New paragraph2")
+			
 		</script>
 	</body>
 </html>
