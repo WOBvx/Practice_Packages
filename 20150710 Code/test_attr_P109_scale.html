@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Attr</title>
+    <script type="text/javascript" src="../d3/d3.js"></script>
+</head>
+
+<body>
+
+<script type="text/javascript">
+	var w = 800; //<-- 把长宽放在变量中
+	var h = 500;
+	var svg = d3.select("body")
+				.append("svg")
+				.attr("width",w)
+				.attr("height",h);
+
+	var dataset = [ [311,22],
+					[130,34],
+					[25,163],
+					[77,8],
+					[100,238],
+					[123,233],
+					[134,5],
+					[34,5],
+					[8,19]
+					];
+
+//创建比例尺进行缩放
+//eg.
+//var scale = d3.scale.linear()
+//					  .domain([100,500])  实际取值范围
+//					  .range([10,350])	  SVG 长宽范围
+//Input:        Output:
+//scale(100);   返回 10
+//scale(300);   返回 180
+//scale(500);   返回 350
+					
+	var padding = 20; //新增边界变量，解决部分圆形被切掉一部分的问题
+
+	var xScale = d3.scale.linear()
+						 .domain([0,d3.max(dataset,function(d){
+							return d[0];
+						 })])
+						 .range([padding,w-padding]);
+	var yScale = d3.scale.linear()
+						 .domain([0,d3.max(dataset,function(d){
+							return d[1];
+						 })])
+						 .range([padding,h-padding]);						 
+						 
+
+	
+	svg.selectAll("circle")
+				.data(dataset) // <-- 数组中有几个数就执行几遍
+				.enter()
+				.append("circle")
+				.attr("cx",function(d) {
+					return xScale(d[0]);
+				})
+				.attr("cy",function(d) {
+					return yScale(d[1]);
+				})
+				.attr("r",function(d) {
+					return Math.sqrt(h-d[0]);
+				});
+
+</script>
+
+</body>
+
+</html>
