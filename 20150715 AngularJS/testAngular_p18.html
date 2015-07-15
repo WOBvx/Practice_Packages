@@ -1,0 +1,22 @@
+<!doctype html>
+<html ng-app>  
+<head>
+	<meta charset="utf-8">
+  <script src="./js/angular-1.0.1.js"></script>
+  <script src="./testController_p18.js"></script>
+</head>
+<body ng-controller="TextController">
+  <p>{{someText}}</p> 
+  
+  <form ng-controller="SomeController" >
+    <input type="checkbox" ng-model="youCheckedIt" >
+  </form>
+  
+  <form ng-controller="StartUpController" >
+	 Starting: 
+	 <input ng-change="computeNeeded()"
+	 ng-model="funding.startingEstimate" >
+	 Recommendation: {{funding.needed}}
+  </form>
+</body>
+</html>
