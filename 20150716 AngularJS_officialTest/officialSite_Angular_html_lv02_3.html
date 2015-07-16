@@ -1,0 +1,45 @@
+<!doctype html>
+<html ng-app="store">  
+  <head>
+    <meta charset="utf-8">
+	<link rel="stylesheet" href="./css/bootstrap.min.css">
+  </head>
+
+<body ng-controller="StoreController as store">
+	<ul class="list-group">
+		<li class="list-group-item" ng-repeat="product in store.products">
+			<h3>
+				{{product.name}}
+				<em class="pull-right">{{product.price | currency}}</em> <!-- currency:formate this to currency -->
+			</h3>
+			<img ng-src="{{product.images[0].full}}"></img>
+			
+			<section ng-controller="PanelController as panel">
+				<ul class="nav nav-pills">
+					<li ng-class="{ active:tab === 1 }"> <a href ng-click="panel.selectTab(1)">Description</a> </li>
+					<li ng-class="{ active:tab === 2 }"> <a href ng-click="panel.selectTab(2)">Specifications</a> </li>
+					<li ng-class="{ active:tab === 3 }"> <a href ng-click="panel.selectTab(3)">Reviews</a> </li>
+				</ul>
+				{{tab}}
+			</section>			
+			
+			<div class="panel" ng-show="tab === 1"> <!-- 当 ng-click 出发 tab =1 ，显示这块 panel -->
+				<h4>Description</h4>
+				<p>{{product.description}}</p>
+			</div>	
+			<div class="panel" ng-show="tab === 2">
+				<h4>Specifications</h4>
+				<blockquote>None yet</blockquote>
+			</div>	
+			<div class="panel" ng-show="tab === 3">
+				<h4>Reviews</h4>
+				<blockquote>None yet</blockquote>
+			</div>				
+
+		</li>
+	</ul>
+
+    <script type="text/javascript" src="./js/angular-1.4.2.min.js"></script>
+    <script type="text/javascript" src="officialSite_Angular_app_lv02_3.js"></script>
+  </body>
+</html>
