@@ -1,0 +1,21 @@
+<!doctype html>
+<html ng-app="store">  
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+
+
+  <body>
+    <div ng-controller="StoreController as store">
+      <h1>{{store.product.name}}</h1>
+	  <h2>${{store.product.price}}</h2>
+	  <p>{{store.product.description}}</p>
+	  <h2>
+    </div>
+	
+    <script type="text/javascript" src="./js/angular-1.4.2.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="officialSite_Angular_app_lv01.js"></script>
+  </body>
+</html>
