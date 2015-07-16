@@ -1,3 +1,8 @@
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 6b20ea8c218b340b7e9f0d2e4727955bd1761f6b
 (function(){
 	var app = angular.module("store",[]);
 	
@@ -5,6 +10,7 @@
 		this.product = gem;
 	})
 	
+<<<<<<< HEAD
 	var gem = [
 	{
 		name: "Dode",
@@ -19,4 +25,11 @@
 	
 	
 	]
+=======
+	var gem = {
+		name: "Dode",
+		price: 2.65,
+		description: "Abula Abula Shakalaka",
+	}
+>>>>>>> 6b20ea8c218b340b7e9f0d2e4727955bd1761f6b
 })();
