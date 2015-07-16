@@ -1,10 +1,6 @@
 (function(){
 	var app = angular.module("store",[]);
 	
-	app.controller("StoreController",function(){ // 目的：用Controller存储 Data
-		this.products = gems;
-	});
-	
 	app.controller("PanelController",function(){
 		this.tab = 1;
 		this.selectTab = function(setTab) {
@@ -12,6 +8,11 @@
 		};
 	});
 	
+
+	app.controller("StoreController",function(){ // 目的：用Controller存储 Data
+		this.products = gems;
+	});
+
 	var gems = [
 		{
 			name: "Dode",
@@ -36,3 +37,6 @@
 	];
 })();
 
+	app.controller("lala",function(){
+	});
+		
