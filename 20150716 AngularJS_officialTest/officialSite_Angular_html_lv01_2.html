@@ -1,0 +1,20 @@
+<!doctype html>
+<html ng-app="store">  
+  <head>
+    <meta charset="utf-8">
+
+  </head>
+
+  <body ng-controller="StoreController as store"> <!-- 原 controller 定义的位置不能再在div层，要向上一层 -->
+    <div ng-repeat="product in store.products">  <!-- ng-repeat 重复命令，用product 作 store.products[i] 的 alias -->
+      <h1>{{product.name}}</h1> 
+	  <h2>${{product.price}}</h2>
+	  <p>{{product.description}}</p>
+	  <h2>
+    </div>
+	
+    <script type="text/javascript" src="./js/angular-1.4.2.min.js"></script>
+	<script type="text/javascript" src="./js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="officialSite_Angular_app_lv01_2.js"></script>
+  </body>
+</html>
