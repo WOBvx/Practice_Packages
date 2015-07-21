@@ -52,7 +52,7 @@ getNodeSet(doc,'/bookstore/book[position()<3]')  #position 显示前两首
 # @ 选择某个属性
 getNodeSet(doc,'//title[@lang]') 
 
-
+#2.3 抓取大众点评
 myheader = c(
 "Accept:image/webp,*/*;q=0.8",
 "Accept-Language:zh-CN,zh;q=0.8",
@@ -62,5 +62,7 @@ myheader = c(
 url="http://t.dianping.com/xiamen"
 temp <- getURL(url,httpheader=myheader) #如果此处没有伪装header，会返回302错误
 write.table(temp,"temp.txt")
+doc <- htmlParse(temp)
+
 
 
