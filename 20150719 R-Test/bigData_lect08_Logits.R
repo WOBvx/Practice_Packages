@@ -26,3 +26,7 @@ xtabs(~ predicted + response, data = classDF)
 x2 <- pi * 100^(-1:3)
 round(x2, 3)
 signif(x2, 3)
+
+# round(x,digits=0)  默认digits = 0,用于显示数组,使得小数点后数字可控
+# trunc只取整数数字，舍掉小数点后数字
+# signif取原数最接近的精度数的个数数字，并保留digits数+1位小数
