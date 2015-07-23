@@ -27,3 +27,6 @@ decay=5e-4, maxit=200);
 #maxit 迭代次数
 #此次试验的几个值和help(nnet)的相一致
 
+summary(myiris)
+#最终机器学习出来的东西
+#测试的过程，即为应用过程
