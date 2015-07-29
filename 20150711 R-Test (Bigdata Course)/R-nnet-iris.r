@@ -18,3 +18,4 @@ acc<-sum(diag(conf))/sum(conf);
 cat("The accuracy on the test set is", acc,"\n");
 
 iris<-sample(1:n,)
+

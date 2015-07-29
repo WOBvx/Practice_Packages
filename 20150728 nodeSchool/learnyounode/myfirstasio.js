@@ -1,7 +1,11 @@
-//03 MY FIRST ASYNC I/O
+var fs = require('fs')
+  , path = require('path')
 
-var fs = require("fs");
-var content = fs.readFile('program.js','utf-8');
-console.log(content);
-// var count =0;
-// var count += word2.length;
+fs.readFile(process.argv[2], count_new_lines) // readFile 可以使用callback
+
+function count_new_lines(error, text) { //Callback 函数
+	if (error)
+		return console.log(errors)
+	var lineCount = text.toString().split('\n').length - 1
+	console.log(lineCount)
+}
