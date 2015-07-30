@@ -1,7 +1,7 @@
 function now (d) {
   return [
       d.getFullYear(), '-',
-      d.getMonth() + 1, '-',
+      d.getMonth() +1, '-', // starts at 0
       d.getDate(), ' ',
       d.getHours(), ':',
       d.getMinutes()
