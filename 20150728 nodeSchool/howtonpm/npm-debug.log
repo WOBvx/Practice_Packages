@@ -1,0 +1,67 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'D:\\Program Files\\nodejs\\\\node.exe',
+1 verbose cli   'D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'publish' ]
+2 info using npm@2.7.4
+3 info using node@v0.12.2
+4 verbose node symlink D:\Program Files\nodejs\\node.exe
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: 'D:\\theTestCode\\20150728 nodeSchool\\howtonpm',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package.tgz not in flight; packing
+10 verbose tar pack [ 'C:\\Users\\Administrator\\AppData\\Roaming\\npm-cache\\@(wobvx)\\WOBPAC\\1.0.0\\package.tgz',
+10 verbose tar pack   'D:\\theTestCode\\20150728 nodeSchool\\howtonpm' ]
+11 verbose tarball C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package.tgz
+12 verbose folder D:\theTestCode\20150728 nodeSchool\howtonpm
+13 info prepublish @(wobvx)/WOBPAC@1.0.0
+14 verbose addLocalTarball adding from inside cache C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package.tgz
+15 silly cache afterAdd @(wobvx)/WOBPAC@1.0.0
+16 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package\package.json not in flight; writing
+17 verbose afterAdd C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package\package.json written
+18 silly publish { name: '@(wobvx)/WOBPAC',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'this is a test package',
+18 silly publish   main: 'index.js',
+18 silly publish   scripts: { test: 'node test.js' },
+18 silly publish   author: '',
+18 silly publish   license: 'ISC',
+18 silly publish   dependencies: {},
+18 silly publish   '@linclark/pkg': '^1.0.2',
+18 silly publish   devDependencies: {},
+18 silly publish   readme: '#Hello\r\n#This is wob test file',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   _id: '@(wobvx)/WOBPAC@1.0.0',
+18 silly publish   _shasum: '15a16f150d4989d874c2976f744c44d6d35b93d2',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name @(wobvx)/WOBPAC
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry http://localhost:15443/
+22 silly mapToRegistry uri http://localhost:15443/@(wobvx)/WOBPAC
+23 verbose publish registryBase http://localhost:15443/
+24 silly publish uploading C:\Users\Administrator\AppData\Roaming\npm-cache\@(wobvx)\WOBPAC\1.0.0\package.tgz
+25 verbose stack Error: Invalid name: "@(wobvx)/WOBPAC"
+25 verbose stack     at ensureValidName (D:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:322:15)
+25 verbose stack     at Object.module.exports.fixNameField (D:\Program Files\nodejs\node_modules\npm\node_modules\normalize-package-data\lib\fixer.js:211:5)
+25 verbose stack     at CachingRegistryClient.publish (D:\Program Files\nodejs\node_modules\npm\node_modules\npm-registry-client\lib\publish.js:41:11)
+25 verbose stack     at D:\Program Files\nodejs\node_modules\npm\lib\publish.js:144:14
+25 verbose stack     at mapToRegistry (D:\Program Files\nodejs\node_modules\npm\lib\utils\map-to-registry.js:55:3)
+25 verbose stack     at publish_ (D:\Program Files\nodejs\node_modules\npm\lib\publish.js:114:3)
+25 verbose stack     at Array.<anonymous> (D:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\bind-actor.js:15:8)
+25 verbose stack     at LOOP (D:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:15:14)
+25 verbose stack     at LOOP (D:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:14:28)
+25 verbose stack     at chain (D:\Program Files\nodejs\node_modules\npm\node_modules\slide\lib\chain.js:20:5)
+26 verbose cwd D:\theTestCode\20150728 nodeSchool\howtonpm
+27 error Windows_NT 6.3.9600
+28 error argv "D:\\Program Files\\nodejs\\\\node.exe" "D:\\Program Files\\nodejs\\node_modules\\npm\\bin\\npm-cli.js" "publish"
+29 error node v0.12.2
+30 error npm  v2.7.4
+31 error Invalid name: "@(wobvx)/WOBPAC"
+32 error If you need help, you may report this error at:
+32 error     <https://github.com/npm/npm/issues>
+33 verbose exit [ 1, true ]
