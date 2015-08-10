@@ -17,6 +17,8 @@ xulie_test <- xulie[-idx,1:(Num-1)] #随机取一半做测试
 xulie_test2 <- xulie[(l-Num+1),2:Num] #取最后一行（真实预测）
 labels <- class.ind(xulie[,Num]) #labels作为结果值（标靶）
 
+
+#for
 myxulie<-nnet(xulie_train, labels[idx,],size=2, rang=0.1,decay=5e-4, maxit=200);
 
 ######
