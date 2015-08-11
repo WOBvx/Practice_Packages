@@ -32,7 +32,8 @@ table(true, cres)
 }
 conf<-test.cl(labels[-idx,], predict(myxulie, xulie_test)); #检测通过现有预测模型预测的准确性
 acc<-sum(diag(conf))/sum(conf);
-if(count>20){break}; #当重复次数超过20时候，就跳出
+count <- count+1;
+if(count>200){break}; #当重复次数超过20时候，就跳出
 }; #while结束
 cat("The accuracy on the test set is", acc,"\n");
 
