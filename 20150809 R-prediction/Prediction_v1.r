@@ -41,4 +41,6 @@ if(count>200){break}; #当重复次数超过20时候，就跳出
 cat("The accuracy on the test set is", accMax,"\n");
 
 #预测结果
-predict(myxulieMax, xulie_test2) #预测未来值
+x <- predict(myxulieMax, xulie_test2) #预测未来值
+x <- cbind(1:8,matrix(x)) #把预测值 cbind 上序号，做成矩阵
+x[order(x[,2],decreasing=T),] #结果排序
