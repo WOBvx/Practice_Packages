@@ -59,7 +59,7 @@ myheader = c(
 "Connection:keep-alive",
 "User-Agent:Mozilla/5.0 (Windows NT 6.3; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/39.0.2171.99 Safari/537.36 LBBROWSER"
 )
-url="http://t.dianping.com/xiamen"
+url="http://fangjia.fang.com/zoushi/c0xm/a0352/"
 temp <- getURL(url,httpheader=myheader) #如果此处没有伪装header，会返回302错误
 write.table(temp,"temp.txt")
 doc <- htmlParse(temp)
