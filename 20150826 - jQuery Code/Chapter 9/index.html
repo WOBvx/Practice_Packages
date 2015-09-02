@@ -522,5 +522,28 @@
       </table>
 
     </div>
+    <script>
+    $(document).ready(function(){
+      $('#topic a').click(function(event){
+        event.preventDefault();
+        var topic = $(this).text();
+        
+        $('#topic a.selected').removeClass('selected');
+        $(this).addClass('selected');
+        
+        $('#news tr').show();
+        if (topic != 'All'){
+          $('#news tr:has(td):not(:contains("'+ topic +'"))')
+            .hide();
+            }
+        });
+    });
+    
+    <!-- test -->
+    
+   $(document).ready(function(){
+    $('#news').find('tr:nth-child(even)').addClass('alt');
+   });
+    </script>
   </body>
 </html>
